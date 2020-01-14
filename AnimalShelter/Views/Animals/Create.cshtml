@@ -13,11 +13,14 @@
     @Html.LabelFor(model => model.Type)
     @Html.TextBoxFor(model => model.Type)
     <br>
+    @Html.LabelFor(model => model.SpeciesID)
+    @Html.DropDownList("SpeciesIdList")
+    <br>
     @Html.LabelFor(model => model.Gender)
     @Html.TextBoxFor(model => model.Gender)
     <br>
     @Html.LabelFor(model => model.DateOfAdmittance)
-    @Html.TextBoxFor(model => model.DateOfAdmittance, "{0:MM/dd/yyyy}")
+    @Html.EditorFor(model => model.DateOfAdmittance, new { @type = "date" })
     <br>
     @Html.LabelFor(model => model.Breed)
     @Html.TextBoxFor(model => model.Breed)

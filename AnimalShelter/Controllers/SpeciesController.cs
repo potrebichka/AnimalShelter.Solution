@@ -14,7 +14,7 @@ namespace AnimalShelter.Controllers
         }
         public ActionResult Index()
         {
-            List<Species> model = _db.species.ToList();
+            List<Species> model = _db.Species.ToList();
             return View(model);
         }
         public ActionResult Create()
@@ -24,13 +24,13 @@ namespace AnimalShelter.Controllers
         [HttpPost]
         public ActionResult Create(Species species)
         {
-            _db.species.Add(species);
+            _db.Species.Add(species);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult Details(int id)
         {
-            Species thisSpecies = _db.species.FirstOrDefault(species => species.SpeciesId == id);
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
             return View(thisSpecies);
         }
     }
