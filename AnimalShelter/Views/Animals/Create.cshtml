@@ -1,0 +1,31 @@
+@{
+    Layout = "_Layout";
+}
+
+@model AnimalShelter.Models.Animal
+
+<h3>Add a new animal</h3>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    <br>
+    @Html.LabelFor(model => model.Type)
+    @Html.TextBoxFor(model => model.Type)
+    <br>
+    @Html.LabelFor(model => model.Gender)
+    @Html.TextBoxFor(model => model.Gender)
+    <br>
+    @Html.LabelFor(model => model.DateOfAdmittance)
+    @Html.TextBoxFor(model => model.DateOfAdmittance, "{0:MM/dd/yyyy}")
+    <br>
+    @Html.LabelFor(model => model.Breed)
+    @Html.TextBoxFor(model => model.Breed)
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Add a new animal" />
+}
+
+<hr>
+<p class="link">@Html.ActionLink("Show all animals", "Index")</p>
+<p class="link">@Html.ActionLink("Home", "Index", "Home")</p>

@@ -1,0 +1,11 @@
+@{
+    Layout = "_Layout";
+}
+
+@model AnimalShelter.Models.Species
+
+<h2>Species details</h2>
+<hr/>
+<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
+<p class="link">@Html.ActionLink("Back to list", "Index")</p>
+<p class="link">@Html.ActionLink("Home", "Index", "Home")</p>
