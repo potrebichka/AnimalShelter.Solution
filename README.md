@@ -1,6 +1,6 @@
 # Animal Shelter
 
-#### _C#, .NET: Animal Shelter, 01/14/2019_
+#### _C#, .NET: Animal Shelter, 01/14/2020_
 
 ## Description
 A program for an animal shelter to track the animals in their facility based on animal type (such as cat or dog).
@@ -21,7 +21,7 @@ Make a program for an animal shelter to track the animals in their facility base
 
 1. Clone this repo:
 ```
-$ git clone https://github.com/potrebichka/ToDoList.Solution.git
+$ git clone https://github.com/potrebichka/AnimalShelter.Solution.git
 ```
 
 2. Go into the repo and run this application:
