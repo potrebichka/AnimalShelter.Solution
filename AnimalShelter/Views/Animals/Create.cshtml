@@ -10,11 +10,8 @@
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
     <br>
-    @Html.LabelFor(model => model.Type)
-    @Html.TextBoxFor(model => model.Type)
-    <br>
     @Html.LabelFor(model => model.SpeciesID)
-    @Html.DropDownList("SpeciesIdList")
+    @Html.DropDownList("SpeciesID")
     <br>
     @Html.LabelFor(model => model.Gender)
     @Html.TextBoxFor(model => model.Gender)
@@ -28,7 +25,6 @@
     <br>
     <input class="btn btn-primary" type="submit" value="Add a new animal" />
 }
-
 <hr>
 <p class="link">@Html.ActionLink("Show all animals", "Index")</p>
 <p class="link">@Html.ActionLink("Home", "Index", "Home")</p>

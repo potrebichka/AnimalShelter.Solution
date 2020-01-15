@@ -30,7 +30,7 @@ namespace AnimalShelter.Controllers
         }
         public ActionResult Details(int id)
         {
-            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.ID == id);
             return View(thisSpecies);
         }
     }
