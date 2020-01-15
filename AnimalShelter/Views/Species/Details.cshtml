@@ -7,5 +7,8 @@
 <h2>Species details</h2>
 <hr/>
 <h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
+
+<p>@Html.ActionLink("Edit Species", "Edit", new {id = Model.SpeciesId} )</p>
+<p>@Html.ActionLink("Delete Species", "Delete", new {id = Model.SpeciesId})</p>
 <p class="link">@Html.ActionLink("Back to list", "Index")</p>
 <p class="link">@Html.ActionLink("Home", "Index", "Home")</p>

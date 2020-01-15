@@ -13,5 +13,7 @@
 <h3>@Html.DisplayNameFor(model => model.Breed): @Html.DisplayFor(model => model.Breed)</h3>
 <hr />
 
+<p class="link">@Html.ActionLink("Edit Animal", "Edit", new {id = Model.AnimalId})</p>
+<p class="link">@Html.ActionLink("Delete Animal", "Delete", new {id = Model.AnimalId})</p>
 <p class="link">@Html.ActionLink("Back to list", "Index")</p>
 <p class="link">@Html.ActionLink("Home", "Index", "Home")</p>

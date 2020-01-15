@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using AnimalShelter.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AnimalShelter.Controllers
 {
@@ -30,8 +32,33 @@ namespace AnimalShelter.Controllers
         }
         public ActionResult Details(int id)
         {
-            Species thisSpecies = _db.Species.FirstOrDefault(species => species.ID == id);
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
             return View(thisSpecies);
+        }
+        public ActionResult Edit(int id)
+        {
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
+            return View(thisSpecies);
+        }
+        [HttpPost]
+        public ActionResult Edit(Species Species)
+        {
+            _db.Entry(Species).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(int id)
+        {
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
+            return View(thisSpecies);
+        }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Species thisSpecies = _db.Species.FirstOrDefault(species => species.SpeciesId == id);
+        _db.Species.Remove(thisSpecies);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
         }
     }
 }
